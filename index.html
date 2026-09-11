@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Eaglercraft</title>
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: black;
+  overflow: hidden;
+}
+
+#gameFrame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  border: none;
+}
+
+#fullscreenBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 18px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 9999;
+}
+</style>
+</head>
+<body>
+
+<iframe id="gameFrame"
+src="https://eaglercraft.q13x.com/1.8.8/js/"
+allowfullscreen>
+</iframe>
+
+<button id="fullscreenBtn" onclick="enterFullscreen()">Fullscreen</button>
+
+<script>
+function enterFullscreen() {
+  if (document.documentElement.requestFullscreen) {
+    document.documentElement.requestFullscreen();
+  }
+}
+</script>
+
+</body>
+</html>
